@@ -4,6 +4,7 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { useCoatingSystems } from "@/hooks/use-coating-systems";
 import { useCreateConsultation } from "@/hooks/use-consultations";
+import { useLanguage } from "@/lib/language";
 import { 
   ArrowRight, ShieldCheck, Factory, Ship, Flame, 
   Droplets, Zap, Download, Calculator, CheckCircle2, ChevronRight
@@ -31,6 +32,7 @@ export default function Home() {
 }
 
 function HeroSection() {
+  const { t } = useLanguage();
   return (
     <section className="relative min-h-[85vh] flex items-center border-b border-border overflow-hidden">
       <div className="absolute inset-0 z-0">
@@ -52,18 +54,17 @@ function HeroSection() {
           >
             <div className="inline-flex items-center gap-2 px-3 py-1 bg-secondary border border-border mb-6">
               <span className="w-2 h-2 bg-primary rounded-none animate-pulse"></span>
-              <span className="text-xs font-mono font-bold tracking-wider uppercase">High-Performance Engineering</span>
+              <span className="text-xs font-mono font-bold tracking-wider uppercase">{t.hero.tag}</span>
             </div>
             
             <h1 className="text-5xl md:text-7xl font-display font-bold leading-[1.1] mb-6 uppercase">
-              <span className="font-barlow-extrabold">Абсолютная</span> <br/>
-              <span className="font-barlow-extrabold">Защита</span><br/>
-              <span className="font-barlow-extrabold">Под  давлением.</span>
+              <span className="font-barlow-extrabold">{t.hero.absolute}</span> <br/>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-foreground to-foreground/60">{t.hero.protection}</span><br/>
+              <span className="font-barlow-extrabold">{t.hero.underPressure}</span>
             </h1>
             
             <p className="text-lg md:text-xl text-muted-foreground font-mono mb-10 max-w-2xl leading-relaxed">
-              Высокотехнологичные промышленные покрытия против коррозии для тяжёлых условий эксплуатации.
-              Соответствуют и превосходят международный стандарт ISO 12944. 
+              {t.hero.paragraph}
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">
@@ -71,14 +72,14 @@ function HeroSection() {
                 href="#consultation" 
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-primary text-primary-foreground font-display font-bold uppercase tracking-widest hover:bg-primary/90 transition-colors border border-primary hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] active:translate-y-[2px] active:translate-x-[2px] active:shadow-none"
               >
-                Запросить консультацию 
+                {t.hero.requestSpec}
                 <ArrowRight className="w-5 h-5" />
               </a>
               <a 
                 href="#systems" 
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-background text-foreground font-display font-bold uppercase tracking-widest hover:bg-secondary transition-colors border border-border hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,0.1)] active:translate-y-[2px] active:translate-x-[2px] active:shadow-none"
               >
-                системы
+                {t.hero.viewSystems}
               </a>
             </div>
           </motion.div>

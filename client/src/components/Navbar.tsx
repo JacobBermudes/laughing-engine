@@ -2,23 +2,26 @@ import { Link } from "wouter";
 import { Menu } from "lucide-react";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useLanguage } from "@/lib/language";
 
 export function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { lang, toggle, t } = useLanguage();
 
-  const navLinks = [
-    { name: "О нас", href: "#about" },
-    { name: "Системы", href: "#systems" },
-    { name: "Области применения", href: "#industries" },
-    { name: "Калькулятор", href: "#calculator" },
-    { name: "Каталог", href: "#catalog" },
-  ];
+  // translation contains navLinks array
+  const navLinks = t.navLinks;
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           <div className="flex items-center">
+            <button
+              onClick={toggle}
+              className="mr-4 text-sm font-mono uppercase border border-border px-2 py-1 hover:bg-secondary transition-colors"
+            >
+              {lang.toUpperCase()}
+            </button>
             <Link href="/" className="flex items-center gap-2 group">
               <span className="font-display font-bold text-2xl tracking-widest text-foreground group-hover:text-primary transition-colors">
                 FARIANTE
