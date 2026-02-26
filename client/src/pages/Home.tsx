@@ -6,8 +6,7 @@ import { useCoatingSystems } from "@/hooks/use-coating-systems";
 import { useCreateConsultation } from "@/hooks/use-consultations";
 import { useLanguage } from "@/lib/language";
 import { 
-  ArrowRight, ShieldCheck, Factory, Ship, Flame, 
-  Droplets, Zap, Download, Calculator, CheckCircle2, ChevronRight
+  ArrowRight, ShieldCheck, Factory, Ship, Flame, Zap, Download, Calculator, CheckCircle2
 } from "lucide-react";
 
 export default function Home() {
@@ -38,7 +37,7 @@ function HeroSection() {
       <div className="absolute inset-0 z-0">
         {/* macro metal texture */}
         <img 
-          src="https://images.unsplash.com/photo-1533090161767-e6ffed986c88?w=1920&q=80" 
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMG-fzHa9pBBTCmmP36JpoqypxybVsrpd4jQ&s" 
           alt="Macro metal texture" 
           className="w-full h-full object-cover grayscale opacity-20 mix-blend-multiply"
         />
@@ -59,7 +58,7 @@ function HeroSection() {
             
             <h1 className="text-5xl md:text-7xl font-display font-bold leading-[1.1] mb-6 uppercase">
               <span className="font-barlow-extrabold">{t.hero.absolute}</span> <br/>
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-foreground to-foreground/60">{t.hero.protection}</span><br/>
+              <span className="font-barlow-extrabold text-transparent bg-clip-text bg-gradient-to-r from-foreground to-foreground/60">{t.hero.protection}</span><br/>
               <span className="font-barlow-extrabold">{t.hero.underPressure}</span>
             </h1>
             
