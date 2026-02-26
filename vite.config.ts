@@ -24,4 +24,5 @@ export default defineConfig({
       deny: ["**/.*"],
     },
   },
+  base: "/laughing-engine/"
 });
