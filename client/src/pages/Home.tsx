@@ -56,14 +56,14 @@ function HeroSection() {
             </div>
             
             <h1 className="text-5xl md:text-7xl font-display font-bold leading-[1.1] mb-6 uppercase">
-              Absolute <br/>
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-foreground to-foreground/60">Protection</span><br/>
-              Under <span className="text-primary">Pressure.</span>
+              <span className="font-barlow-extrabold">Абсолютная</span> <br/>
+              <span className="font-barlow-extrabold">Защита</span><br/>
+              <span className="font-barlow-extrabold">Под  давлением.</span>
             </h1>
             
             <p className="text-lg md:text-xl text-muted-foreground font-mono mb-10 max-w-2xl leading-relaxed">
-              Industrial-grade anti-corrosion and protective coatings formulated for severe environments. 
-              Engineered to meet and exceed global ISO 12944 standards.
+              Высокотехнологичные промышленные покрытия против коррозии для тяжёлых условий эксплуатации.
+              Соответствуют и превосходят международный стандарт ISO 12944. 
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">
@@ -71,14 +71,14 @@ function HeroSection() {
                 href="#consultation" 
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-primary text-primary-foreground font-display font-bold uppercase tracking-widest hover:bg-primary/90 transition-colors border border-primary hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] active:translate-y-[2px] active:translate-x-[2px] active:shadow-none"
               >
-                Request Specification
+                Запросить консультацию 
                 <ArrowRight className="w-5 h-5" />
               </a>
               <a 
                 href="#systems" 
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-background text-foreground font-display font-bold uppercase tracking-widest hover:bg-secondary transition-colors border border-border hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,0.1)] active:translate-y-[2px] active:translate-x-[2px] active:shadow-none"
               >
-                View Systems
+                системы
               </a>
             </div>
           </motion.div>
@@ -90,7 +90,7 @@ function HeroSection() {
 
 function AboutSection() {
   return (
-    <section className="py-24 border-b border-border bg-white">
+    <section id="about" className="py-24 border-b border-border bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
@@ -342,7 +342,7 @@ function CatalogSection() {
   return (
     <section id="catalog" className="py-24 border-b border-border bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl md:text-4xl font-display font-bold uppercase mb-12 text-center">Technical Documentation</h2>
+        <h2 className="text-3xl md:text-4xl font-display font-bold uppercase mb-12 text-center">Техническая документация</h2>
         <div className="max-w-4xl mx-auto grid grid-cols-1 gap-4">
           {docs.map((doc, i) => (
             <div key={i} className="flex flex-col sm:flex-row items-start sm:items-center justify-between p-6 border border-border hover:border-primary transition-colors group bg-secondary/30">

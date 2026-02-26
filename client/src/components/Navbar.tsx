@@ -7,10 +7,11 @@ export function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const navLinks = [
-    { name: "Systems", href: "#systems" },
-    { name: "Industries", href: "#industries" },
-    { name: "Calculator", href: "#calculator" },
-    { name: "Catalog", href: "#catalog" },
+    { name: "О нас", href: "#about" },
+    { name: "Системы", href: "#systems" },
+    { name: "Области применения", href: "#industries" },
+    { name: "Калькулятор", href: "#calculator" },
+    { name: "Каталог", href: "#catalog" },
   ];
 
   return (
