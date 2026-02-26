@@ -1,0 +1,30 @@
+name: Deploy to Pages
+on:
+  workflow_run:
+    workflows: ["Build"] 
+    types: [completed]
+    branches: [master]
+
+permissions:
+  pages: write
+  id-token: write
+
+jobs:
+  deploy_job:
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download Artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: dist-files
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          run-id: ${{ github.event.workflow_run.id }}
+
+      - name: Upload to Pages
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+
+      - name: Deploy
+        uses: actions/deploy-pages@v4
